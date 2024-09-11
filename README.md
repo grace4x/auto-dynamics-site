@@ -1,1 +1,1 @@
-Website for auto-dynamics: https://github.com/grace4x/auto-dynamics
+Website for auto-dynamics project: https://github.com/grace4x/auto-dynamics
