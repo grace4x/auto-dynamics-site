@@ -116,6 +116,109 @@ findings suggest that the Transformer has potential to excel in subjective areas
 </section>
 <!-- End paper abstract -->
 
+<section class="section hero is-light"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Examples</h2>
+        <div class="content has-text-justified">
+          <table>
+            <tr>
+              <th center>Title of Piece</th>
+              <th center>No Dynamics</th>
+              <th center>Generated Dynamics</th>
+            </tr>
+
+
+            <tr>
+              <td>Chopin: Nocturne Op. 27 No. 1 in C-sharp minor</td>
+              <td>
+                <audio controls=""> <source src="static/audio/chopin-new.mp3" type="audio/mpeg" /> </audio>
+              </td>
+              <td>
+                <audio controls=""> <source src="static/audio/chopin-new-nd.mp3" type="audio/mpeg" /> </audio>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Liszt: Concert Etude No. 2, "Gnomenreigen," S. 145</td>
+              <td>
+                <audio controls=""> <source src="static/audio/liszt-new.mp3" type="audio/mpeg" /> </audio>
+              </td>
+              <td>
+                <audio controls=""> <source src="static/audio/liszt-new-nd.mp3" type="audio/mpeg" /> </audio>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Debussy: Estampes No. 3, "Jardins sous la Pluie," L. 100</td>
+              <td>
+                <audio controls=""> <source src="static/audio/debussy-new.mp3" type="audio/mpeg" /> </audio>
+              </td>
+              <td>
+                <audio controls=""> <source src="static/audio/debussy-new-nd.mp3" type="audio/mpeg" /> </audio>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Beethoven: Sonata No. 3 in C Major, Op. 2, I. Allegro con brio</td>
+              <td>
+                <audio controls=""> <source src="static/audio/beethoven-new.mp3" type="audio/mpeg" /> </audio>
+              </td>
+              <td>
+                <audio controls=""> <source src="static/audio/beethoven-new-nd.mp3" type="audio/mpeg" /> </audio>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Bach: Prelude and Fugue in B-flat minor, BWV 891</td>
+              <td>
+                <audio controls=""> <source src="static/audio/bach-new.mp3" type="audio/mpeg" /> </audio>
+              </td>
+              <td>
+                <audio controls=""> <source src="static/audio/bach-new-nd.mp3" type="audio/mpeg" /> </audio>
+              </td>
+            </tr>
+
+          </table>
+
+          <p>Some examples of score-generated midi files from the internet without expressive timing or pedal: </p>
+
+          <table>
+            <tr>
+              <th center>Title</th>
+              <th center>Original</th>
+              <th center>Generated Dynamics</th>
+            </tr>
+
+
+            <tr>
+              <td>Happy Birthday Variations (Arr. by Jonny May on Musescore)</td>
+              <td>
+                <audio controls=""> <source src="static/audio/birthday_orig.mp3" type="audio/mpeg" /> </audio>
+              </td>
+              <td>
+                <audio controls=""> <source src="static/audio/birthday_inference.mp3" type="audio/mpeg" /> </audio>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Yiruma: River Flows in You</td>
+              <td>
+                <audio controls=""> <source src="static/audio/yiruma_orig.mp3" type="audio/mpeg" /> </audio>
+              </td>
+              <td>
+                <audio controls=""> <source src="static/audio/yiruma_inference.mp3" type="audio/mpeg" /> </audio>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -123,6 +226,11 @@ findings suggest that the Transformer has potential to excel in subjective areas
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <img src="static/images/auto-dynamics-method.png" alt="auto dynamics method"/>          
+        </div>
+        <div class="content has-text-justified is-four-fifths">
+          <p>
+            This project uses an encoder-decoder Transformer model to generate musical dynamics given a MIDI file. MIDI events are first converted
+            into a time-by-pitch matrix, which is used as encoder input and then decoded into velocity generations. 
         </div>
       </div>
     </div>
@@ -252,9 +360,10 @@ findings suggest that the Transformer has potential to excel in subjective areas
             In fact, the notes highlighted in blue above represent an iteration of its fugue’s motif. Unfortunately, the model did
             not successfully recognize this passage as a motif, possibly due to either lack of context or lack of training data. This
             is a possible area for improvement.   
-          <p>
-            <audio controls=""> <source src="static/audio/liszt-new.mp3" type="audio/mpeg" /> </audio>
+
+          <p><br><br>If useful, please cite with the following: </p>
         </div>
+        
       </div>
     </div>
   </div>
